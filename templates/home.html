@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title> App By Samarth </title>
+    <style>
+       *{font-size:30px;}
+       body{
+           background-image:url({{url_for('static', filename='bulitin/car1.jpg')}});
+           background-size:cover;
+           color:Red;
+         }
+         h1{
+           background-color:green;
+           color:yellow;
+            }
+         .btn{border-radius:30px;
+          color:yellow;
+          background-color:green;}
+        
+       
+    </style>
+    
+  </head>
+   
+  <body >
+       
+       <center>
+        <h1> Red Wine Quality Detector </h1>
+        
+               
+         <form method="POST">
+         
+             
+          <input type="number" name="fa" placeholder="Fixed Acidity" min="4.6" max="15.9" step="any"  required />
+             <br/><br/>
+          <input type="number" name="va" placeholder="volatile acidity" min="0.12" max="1.58" step="any"  required />
+             <br/><br/>
+          <input type="number" name="ca" placeholder="citric acid" min="0" max="1" step="any"  required />
+             <br/><br/>
+          <input type="number" name="rs" placeholder="residual sugar" min="0.9" max="15.5" step="any"  required />
+             <br/><br/>
+          <input type="number" name="c" placeholder="chlorides" min="0.012" max="0.611" step="any"  required />
+             <br/><br/>
+          <input type="number" name="fs" placeholder="free sulfur dioxide" min="1" max="72" step="any"  required />
+             <br/><br/>
+          <input type="number" name="ts" placeholder="total sulfur dioxide" min="6" max="289" step="any" required />
+             <br/><br/>
+          <input type="number" name="d" placeholder="density" min="0.99007" max="1.00369" step="any"  required />
+             <br/><br/>
+          <input type="number" name="p" placeholder="pH" min="2.74" max="4.01" step="any" required />
+             <br/><br/>
+          <input type="number" name="s" placeholder="sulphates" min="0.33" max="2" step="any"  required />
+             <br/><br/>
+          <input type="number" name="a" placeholder="alcohol" min="8.4" max="14.9" step="any"  required />
+             <br/><br/>
+          
+         
+          <input type="submit" name="action" value="Check Quality" class="btn"/>
+          </form>
+         
+          <form method="POST">
+          <input type="submit" name="action" value="Logout" class="btn" style="position:absolute; top:50px; right:80px"/>
+          </form>
+        
+         {{msg}}
+      </center>
+  </body>
+  </div>
+</html>
